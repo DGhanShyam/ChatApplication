@@ -1,0 +1,184 @@
+<!-- <div class="container-sm">100% wide until small breakpoint</div>
+<div class="container-md">100% wide until medium breakpoint</div> -->
+
+
+<div class="container mh-100" style="max-width: 100%; max-height: 100%; ">
+  <div class="row">
+
+      <!--first col  -->
+    <div class="col-3 mh-100 pt-5 text-dark bg-light d-none d-sm-none d-lg-block d-xxl-block" style="border-right:1px  grey">
+       
+      <div class="row mb-4 user-info">
+            <div class="col-2" >
+              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.bf94XACaL-jSenh4px81ZAHaE8%26pid%3DApi&f=1" style="width:62px; height:54px; border-radius: 50%;">
+            </div>
+
+            <div class="col-10 user-data">
+              <p class="m-0 p-0 float-end">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M11.013 1.427a1.75 1.75 0 012.474 0l1.086 1.086a1.75 1.75 0 010 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 01-.927-.928l.929-3.25a1.75 1.75 0 01.445-.758l8.61-8.61zm1.414 1.06a.25.25 0 00-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 000-.354l-1.086-1.086zM11.189 6.25L9.75 4.81l-6.286 6.287a.25.25 0 00-.064.108l-.558 1.953 1.953-.558a.249.249 0 00.108-.064l6.286-6.286z"></path></svg>
+              </p> 
+              <p class="name text-primary m-0 p-0 fs-5"> Gravid Cristofer</p>
+              <p class="m-0 p-0 float-end"> 
+
+              </p> 
+              <p class="m-0 p-0">Team Discussion</p> 
+            </div>    
+      </div>
+
+      <div class="row ">
+          <div class="input-group mb-3">
+            
+            <input type="text" class="form-control" placeholder= "Search Friends..." aria-label="Username">
+            
+          </div>
+      </div>
+
+      <div class="row mb-4 " *ngFor="let data of Chatdata ; let i=index;">
+              <div class="col-2" >
+                <img src="{{data.img}}" alt="">
+              </div>
+
+              <div class="col-10">
+                <p class="m-0 p-0 float-end">{{time}}</p> 
+                <p class="text-primary m-0 p-0 fs-6"> {{data.name}}</p>
+                <p class="m-0 p-0 float-end">..</p> 
+                <p class="m-0 p-0" (click)="showUser()">{{data.chat}}</p> 
+              </div>
+      </div>
+
+    </div>
+
+      <!--second col  -->
+
+    <div class="col col-xs-12 mt-5" style="
+      max-height:700px; 
+      overflow-x: auto;
+      overflow-y: auto;" >
+        <div class="row sticky-top" style=" background-color: #f8f9fa;">
+
+          <div class="col-1 mr-5" >
+            <img class=" mr-2" src="../assets/img/1.jpg">
+          </div>
+
+          <div class="col mr-5">
+            <p class="pl-3 pt-2 fs-5"> Diane  Vanhorn</p>
+          </div>
+
+          <div class="col">
+
+            <div class=" p-2 float-end">
+
+              <svg class="pr-3" xmlns="http://www.w3.org/2000/svg" width="26" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+              <svg class="pr-3" xmlns="http://www.w3.org/2000/svg" width="26" height="30" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="30" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+              </svg>
+<!-- 
+              <i class="bi bi-bell"></i>
+              <i class="bi bi-bell"></i> -->
+      
+            </div> 
+
+          </div> 
+          
+        </div>
+
+        <div class="d-flex justify-content-center">Today</div>
+
+        <div class="row" *ngFor="let data of employees ;" >
+
+            <div class="d-flex justify-content-start white"
+              *ngIf="data.name == 'user'">  
+            <img src="../assets/img/1.jpg" style="width:22px; height:24px; border-radius: 50%; margin-top: 6px;">
+               <p> {{data.chat}} </p> 
+            </div>
+            
+            <div class="d-flex justify-content-end blue"
+            *ngIf="data.name == 'admin'">  
+            <p> {{data.chat}} </p> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+              <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z"/>
+            </svg>
+            <!-- <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.bf94XACaL-jSenh4px81ZAHaE8%26pid%3DApi&f=1" style="width:22px; height:24px; border-radius: 50%; margin-top: 6px;"> -->
+            </div>
+
+        </div>
+
+
+        <div class="row align-items-end">
+          <div class="col-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="30" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
+              <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+              <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"/>
+            </svg>
+
+          </div>
+          <div class="col-7">
+            <!-- One of three columns -->
+            <div class="input-group">
+            
+              <input type="text" class="form-control" placeholder= "Write Something.." aria-label="Username">
+              
+            </div>
+          </div>
+          <div class="col-4">
+            <!-- One of three columns -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-text" viewBox="0 0 16 16">
+              <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z"/>
+              <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+              <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
+              <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+            </svg>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-smile-upside-down" viewBox="0 0 16 16">
+              <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0-1a8 8 0 1 1 0 16A8 8 0 0 1 8 0z"/>
+              <path d="M4.285 6.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 4.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 3.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683zM7 9.5C7 8.672 6.552 8 6 8s-1 .672-1 1.5.448 1.5 1 1.5 1-.672 1-1.5zm4 0c0-.828-.448-1.5-1-1.5s-1 .672-1 1.5.448 1.5 1 1.5 1-.672 1-1.5z"/>
+            </svg>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+              <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+            </svg>
+            
+          </div>
+        </div>
+
+    </div>
+
+          <!--third col  -->
+    <div class="col-3 pt-5 d-none d-sm-none d-lg-block d-xxl-block" style="border:2px solid black">
+
+
+      <div class="input-group">
+            
+        <input type="text" class="form-control" placeholder= "Search Person" aria-label="Username">
+        
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <img class="mt-5" style="width:100px; height: 100px;" src="../assets/img/1.jpg">
+      </div>
+
+      <div class="d-flex justify-content-center">
+
+      <p class="name text-primary  fs-3"> Gravid Cristofer</p>
+</div>
+
+<div class="d-flex justify-content-center">
+
+  <p class="name  fs-5"> Junior Developer</p>
+</div>
+      
+
+
+
+    </div>
+    
+  </div>
+</div>
